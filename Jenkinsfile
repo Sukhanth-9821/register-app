@@ -23,8 +23,8 @@ pipeline{
     }
     stage ("SonarQube Scanner"){
       steps{
-        withSonarQubeEnv(credentialsId: 'SonarNewmar2024') {
-           sh "mvn sonar:sonar"
+        withSonarQubeEnv(credentialsId: 'Sonar'){
+        sh "mvn sonar:sonar"
 }
       }
     }
