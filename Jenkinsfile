@@ -30,12 +30,7 @@ pipeline{
         }
       }
     }
-    stage("SonarQube QualityGate"){
-      steps{
-        waitForQualityGate abortPipeline: false, credentialsId: 'NewSonarCred'
 
-      }
-    }
   }
   
 }
