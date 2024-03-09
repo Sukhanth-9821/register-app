@@ -32,7 +32,9 @@ pipeline{
     }
     stage("SonarQube QualityGate"){
       steps{
-        waitForQualityGate abortPipeline: false, credentialsId: 'SonarNewmar2024'
+        def sonarqubeToken = "sqa_5ca37de718763953c2613adcafdc8be0602a581c"
+        waitForQualityGate abortPipeline: false, credentialsId: 'SonarNewmar2024', sonarQubeCredentials: sonarqubeToken
+
       }
     }
   }
