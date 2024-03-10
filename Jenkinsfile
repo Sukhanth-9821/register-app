@@ -40,8 +40,8 @@ pipeline{
     stage("Docker Push"){
       steps{
         script{
-            sh 'docker login -u="sukhanth" -p="India@#123"'
-            sh 'docker push sukhanth/registerapp'
+            sh 'sudo docker login -u="sukhanth" -p="India@#123"'
+            sh 'sudo docker push sukhanth/registerapp'
       }
     }
     }
