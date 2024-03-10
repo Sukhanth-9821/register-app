@@ -37,6 +37,14 @@ pipeline{
         }
       }
     }
+    stage("Docker Push"){
+      steps{
+        script{
+          docker.withRegistry('https://registry.hub.docker.com', 'DockerCred') {
+            docker push sukhanth/registerapp
+        }
+      }
+    }
 
   }
   
