@@ -30,6 +30,13 @@ pipeline{
         }
       }
     }
+    stage("Docker Build"){
+      steps{
+        script{
+          sh "docker build -t sukhanth/registerapp ."
+        }
+      }
+    }
 
   }
   
