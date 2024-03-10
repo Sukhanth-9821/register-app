@@ -40,9 +40,8 @@ pipeline{
     stage("Docker Push"){
       steps{
         script{
-          docker.withRegistry('https://registry.hub.docker.com', 'DockerCred') {
-            docker.image('sukhanth/registerapp').push()
-        }
+            sh 'docker login -u="sukhanth" -p="India@#123"'
+            sh 'docker push sukhanth/registerapp'
       }
     }
     }
