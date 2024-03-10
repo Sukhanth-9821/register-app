@@ -41,7 +41,7 @@ pipeline{
       steps{
         script{
           docker.withRegistry('https://registry.hub.docker.com', 'DockerCred') {
-            docker push sukhanth/registerapp
+            docker.image('sukhanth/registerapp').push()
         }
       }
     }
