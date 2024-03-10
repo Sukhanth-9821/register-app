@@ -33,7 +33,7 @@ pipeline{
     stage("Docker Build"){
       steps{
         script{
-          sh "docker build -t sukhanth/registerapp ."
+          sh "sudo docker build -t sukhanth/registerapp ."
         }
       }
     }
